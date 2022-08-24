@@ -369,7 +369,8 @@ async function isAuthenticated(username, password) {
     return user;
 }
 
-async function getUsers() {
+async function getUsers() 
+{
     const usersCollection = await users();
 
     let usersList = await usersCollection.find({}, {

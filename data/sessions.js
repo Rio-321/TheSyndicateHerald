@@ -6,7 +6,8 @@ const collections = require("./collection");
 const sessions = collections.sessions;
 const users = require("./users");
 
-async function addSession(sessionId, userId) {
+async function addSession(sessionId, userId) 
+{
     const error = new Error();
     error.http_code = 200;
     const errors = {};
@@ -16,7 +17,8 @@ async function addSession(sessionId, userId) {
         error.http_code = 400
     }
 
-    if (typeof sessionId === "string") {
+    if (typeof sessionId === "string") 
+    {
         try {
             sessionId = MUUID.from(sessionId);
         } catch (e) {
@@ -72,7 +74,8 @@ async function addSession(sessionId, userId) {
     }
 }
 
-async function getSession(sessionId) {
+async function getSession(sessionId) 
+{
     const error = new Error();
     error.http_code = 200;
     const errors = {};

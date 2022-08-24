@@ -37,11 +37,15 @@ router.post("/signup", async (request, response) => {
 // login service
 router.post("/login", async (request, response) => {
     try {
-        if (isLoggedIn(request)) {
+
+        if (isLoggedIn(request)) 
+        {
             response.redirect(`/${request.session.user.username}/`);
         }
+
         const user = await users.isAuthenticated(request.body['username'], request.body['password']);
-        if (user) {
+        if (user) 
+        {
             await sessions.addSession(request.sessionID, user._id);
             request.session.userID = MUUID.from(user._id).toString();
             request.session.user = user;
@@ -49,6 +53,8 @@ router.post("/login", async (request, response) => {
             response.redirect(`/${user.username}/feed`);
         }
     } catch (e) {
+
+        console.log("Bhosle");
         response.status(e.http_code).render("home", Object.assign({layout: "home"}, JSON.parse(e.message)))
     }
 });

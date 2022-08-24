@@ -5,6 +5,7 @@ const {isLoggedIn} = require("../core/login");
 const rootRoutes = require("./root");
 const userRoutes = require("./user");
 
+
 const constructorMethod = app => {
     app.use(session({
         name: 'AuthCookie',
@@ -17,7 +18,8 @@ const constructorMethod = app => {
     }));
 
     // logging middleware
-    const logger = function (request, response, next) {
+    const logger = function (request, response, next) 
+    {
         console.log(`[${new Date().toUTCString()}]: ${request.method}\t${request.originalUrl}\t\t${isLoggedIn(request) ? 'Authenticated' : 'Not Authenticated'}`);
         next()
     };
