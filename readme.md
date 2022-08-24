@@ -107,7 +107,7 @@ npm start
 
 The server is now running and ready to use. Go to [localhost:3000/](http://localhost:3000/) and checkout.
 
-#### 5. Create a user or login with existing one.
+<!-- #### 5. Create a user or login with existing one.
 
 You can create a new user or login with one of the following credentials:
 
@@ -125,7 +125,7 @@ password: scabbers
 username: hermoine
 password: crookshanks
 ```
-
+ -->
 ### Things to do once the Website is running
 
 #### 1. Select News sources.
@@ -148,6 +148,6 @@ You can scroll through your News Feeds.It will contain the latest news and top h
 
 You can see your activity and their time in the Sessions tab.
 
-### Demo
+<!-- ### Demo
 
-[![The Syndicate Herald](public/img/logo.png)](https://youtu.be/-i1pzRnUenw "The Syndicate Herald")
+[![The Syndicate Herald](public/img/logo.png)](https://youtu.be/-i1pzRnUenw "The Syndicate Herald") -->
